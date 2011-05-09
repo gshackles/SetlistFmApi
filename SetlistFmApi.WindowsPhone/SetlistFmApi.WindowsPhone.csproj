@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DC7F6A7E-1358-4D15-BC94-4AA004D98F8B}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SetlistFmApi.WindowsPhone</RootNamespace>
+    <AssemblyName>SetlistFmApi.WindowsPhone</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RestSharp.WindowsPhone">
+      <HintPath>..\References\RestSharp.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Net" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SetlistFmApi\Location.cs">
+      <Link>Location.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\LocationAsync.cs">
+      <Link>LocationAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\City.cs">
+      <Link>Model\Location\City.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\Coords.cs">
+      <Link>Model\Location\Coords.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\Country.cs">
+      <Link>Model\Location\Country.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\Venue.cs">
+      <Link>Model\Location\Venue.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Artist.cs">
+      <Link>Model\Music\Artist.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Set.cs">
+      <Link>Model\Music\Set.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Setlist.cs">
+      <Link>Model\Music\Setlist.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Song.cs">
+      <Link>Model\Music\Song.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Music.cs">
+      <Link>Music.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\MusicAsync.cs">
+      <Link>MusicAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\ListOptionsBase.cs">
+      <Link>SearchOptions\ListOptionsBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Location\CountrySearchOptions.cs">
+      <Link>SearchOptions\Location\CountrySearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Music\ArtistSearchOptions.cs">
+      <Link>SearchOptions\Music\ArtistSearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Location\CitySearchResult.cs">
+      <Link>SearchResults\Location\CitySearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Location\CountrySearchResult.cs">
+      <Link>SearchResults\Location\CountrySearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Music\ArtistSearchResult.cs">
+      <Link>SearchResults\Music\ArtistSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Music\SetlistSearchResult.cs">
+      <Link>SearchResults\Music\SetlistSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\SearchResultsList.cs">
+      <Link>SearchResults\SearchResultsList.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SetlistFmApi.cs">
+      <Link>SetlistFmApi.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="943090bc-15ec-4b64-8042-f178328c40e1" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

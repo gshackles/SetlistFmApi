@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<city stateCode="CA" state="California" name="San Jose" id="5392171">
+    <coords long="-121.8949555" lat="37.3393857"/>
+    <country name="United States" code="US"/>
+</city>

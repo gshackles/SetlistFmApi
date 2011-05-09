@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<venue name="Royal Albert Hall" id="53d63779">
+    <city stateCode="ENG" state="England" name="London" id="2643743">
+        <coords long="-0.125532746315002" lat="51.5084152563931"/>
+        <country name="United Kingdom" code="GB"/>
+    </city>
+    <url>
+        http://www.setlist.fm/venue/royal-albert-hall-london-england-53d63779.html
+    </url>
+</venue>

@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi", "SetlistFmApi\SetlistFmApi.csproj", "{943090BC-15EC-4B64-8042-F178328C40E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.Tests", "SetlistFmApi.Tests\SetlistFmApi.Tests.csproj", "{FABEA9DE-E24E-4174-97A7-A1A7B2222235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.Android", "SetlistFmApi.Android\SetlistFmApi.Android.csproj", "{8333B98A-A502-4F1E-A69C-0696DC24DD61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.WindowsPhone", "SetlistFmApi.WindowsPhone\SetlistFmApi.WindowsPhone.csproj", "{DC7F6A7E-1358-4D15-BC94-4AA004D98F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.Silverlight", "SetlistFmApi.Silverlight\SetlistFmApi.Silverlight.csproj", "{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{943090BC-15EC-4B64-8042-F178328C40E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{943090BC-15EC-4B64-8042-F178328C40E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{943090BC-15EC-4B64-8042-F178328C40E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{943090BC-15EC-4B64-8042-F178328C40E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABEA9DE-E24E-4174-97A7-A1A7B2222235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABEA9DE-E24E-4174-97A7-A1A7B2222235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABEA9DE-E24E-4174-97A7-A1A7B2222235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABEA9DE-E24E-4174-97A7-A1A7B2222235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8333B98A-A502-4F1E-A69C-0696DC24DD61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8333B98A-A502-4F1E-A69C-0696DC24DD61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8333B98A-A502-4F1E-A69C-0696DC24DD61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8333B98A-A502-4F1E-A69C-0696DC24DD61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7F6A7E-1358-4D15-BC94-4AA004D98F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7F6A7E-1358-4D15-BC94-4AA004D98F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7F6A7E-1358-4D15-BC94-4AA004D98F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7F6A7E-1358-4D15-BC94-4AA004D98F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

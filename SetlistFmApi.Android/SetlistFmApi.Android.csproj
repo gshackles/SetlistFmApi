@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8333B98A-A502-4F1E-A69C-0696DC24DD61}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SetlistFmApi.Android</RootNamespace>
+    <AssemblyName>SetlistFmApi.Android</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;__ANDROID__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;__ANDROID__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="RestSharp.Android">
+      <HintPath>..\References\RestSharp.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SetlistFmApi\Location.cs">
+      <Link>Location.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\LocationAsync.cs">
+      <Link>LocationAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\City.cs">
+      <Link>Model\Location\City.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\Coords.cs">
+      <Link>Model\Location\Coords.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\Country.cs">
+      <Link>Model\Location\Country.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Location\Venue.cs">
+      <Link>Model\Location\Venue.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Artist.cs">
+      <Link>Model\Music\Artist.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Set.cs">
+      <Link>Model\Music\Set.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Setlist.cs">
+      <Link>Model\Music\Setlist.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\Song.cs">
+      <Link>Model\Music\Song.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Music.cs">
+      <Link>Music.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\MusicAsync.cs">
+      <Link>MusicAsync.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\ListOptionsBase.cs">
+      <Link>SearchOptions\ListOptionsBase.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Location\CountrySearchOptions.cs">
+      <Link>SearchOptions\Location\CountrySearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Music\ArtistSearchOptions.cs">
+      <Link>SearchOptions\Music\ArtistSearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Location\CitySearchResult.cs">
+      <Link>SearchResults\Location\CitySearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Location\CountrySearchResult.cs">
+      <Link>SearchResults\Location\CountrySearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Music\ArtistSearchResult.cs">
+      <Link>SearchResults\Music\ArtistSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Music\SetlistSearchResult.cs">
+      <Link>SearchResults\Music\SetlistSearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\SearchResultsList.cs">
+      <Link>SearchResults\SearchResultsList.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SetlistFmApi.cs">
+      <Link>SetlistFmApi.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="943090bc-15ec-4b64-8042-f178328c40e1" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

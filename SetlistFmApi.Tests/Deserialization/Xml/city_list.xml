@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<cities total="3" page="1" itemsPerPage="50">
+    <cities stateCode="NY" state="New York" name="New York" id="5128581">
+        <coords long="-74.0059729" lat="40.7142691"/>
+        <country name="United States" code="US"/>
+    </cities>
+    <cities stateCode="NY" state="New York" name="Empire State" id="5128638">
+        <coords long="-75.4998978" lat="43.0003472"/>
+        <country name="United States" code="US"/>
+    </cities>
+    <cities stateCode="MO" state="Missouri" name="New York" id="4049286">
+        <coords long="-93.9268836" lat="39.6852874"/>
+        <country name="United States" code="US"/>
+    </cities>
+</cities>

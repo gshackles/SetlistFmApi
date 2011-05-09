@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<setlist versionId="2bde2cda" tour="Sounds of The Summer" id="23d5fc87" eventDate="27-08-2010">
+    <artist sortName="Opeth" name="Opeth" mbid="c14b4180-dc87-481e-b17a-64e4150f90f6">
+        <url>http://www.setlist.fm/setlists/opeth-63d682c3.html</url>
+    </artist>
+    <venue name="Metal Hammer Festival" id="bd6c5ea">
+        <city stateCode="83" state="Silesian Voivodeship" name="Katowice" id="3096472">
+            <coords long="19.0166667" lat="50.2666667"/>
+            <country name="Poland" code="PL"/>
+        </city>
+        <url>
+            http://www.setlist.fm/venue/metal-hammer-festival-katowice-poland-bd6c5ea.html
+        </url>
+    </venue>
+    <sets>
+        <set>
+            <song name="Windowpane"/>
+            <song name="The Grand Conjuration"/>
+            <song name="The Drapery Falls"/>
+            <song name="The Lotus Eater"/>
+            <song name="The Moor"/>
+            <song name="Demon of the Fall"/>
+            <song name="Bleak"/>
+            <song name="Deliverance"/>
+        </set>
+    </sets>
+    <url>
+        http://www.setlist.fm/setlist/opeth/2010/metal-hammer-festival-katowice-poland-23d5fc87.html
+    </url>
+</setlist>
