@@ -23,5 +23,12 @@ namespace SetlistFmApi
 
             executeRequestAsync<Artist>(request, callback);
         }
+
+        public void FindSetlistsAsync(SetlistSearchOptions options, Action<SetlistSearchResult> callback)
+        {
+            var request = createSetlistSearchRequest(options);
+
+            executeRequestAsync<SetlistSearchResult>(request, callback);
+        }
     }
 }

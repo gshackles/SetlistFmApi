@@ -14,6 +14,8 @@ namespace SetlistFmApi.Model.Music
 
         public string Id { get; set; }
 
+        public string LastFmEventId { get; set; }
+
         public DateTime EventDate { get; set; }
 
         public Artist Artist { get; set; }

@@ -63,6 +63,7 @@
     <Compile Include="Model\Music\Artist.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Music\CoverInfo.cs" />
     <Compile Include="Model\Music\Set.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -88,6 +89,7 @@
     <Compile Include="SearchOptions\Music\ArtistSearchOptions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SearchOptions\Music\SetlistSearchOptions.cs" />
     <Compile Include="SearchResults\Location\CitySearchResult.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -5,10 +5,12 @@ using System.Text;
 
 namespace SetlistFmApi.Model.Music
 {
-    public class Song
+    public class CoverInfo
     {
+        public string SortName { get; set; }
+
         public string Name { get; set; }
 
-        public CoverInfo Cover { get; set; }
+        public string MbId { get; set; }
     }
 }

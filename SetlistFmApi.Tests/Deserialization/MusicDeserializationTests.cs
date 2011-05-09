@@ -47,18 +47,23 @@ namespace SetlistFmApi.Tests.Deserialization
             var setlist = deserializeFromFile<Setlist>("setlist_opeth.xml");
 
             Assert.NotNull(setlist);
-            Assert.Equal("2bde2cda", setlist.VersionId);
-            Assert.Equal("Sounds of The Summer", setlist.Tour);
-            Assert.Equal("23d5fc87", setlist.Id);
-            Assert.Equal(new DateTime(2010, 8, 27), setlist.EventDate);
+            Assert.Equal("1bdf21a4", setlist.VersionId);
+            Assert.Equal("Evolution XX", setlist.Tour);
+            Assert.Equal("6bd48ebe", setlist.Id);
+            Assert.Equal("1322608", setlist.LastFmEventId);
+            Assert.Equal(new DateTime(2010, 4, 7), setlist.EventDate);
             Assert.Equal("Opeth", setlist.Artist.Name);
-            Assert.Equal("Metal Hammer Festival", setlist.Venue.Name);
+            Assert.Equal("Terminal 5", setlist.Venue.Name);
             Assert.Equal(1, setlist.Sets.Count);
 
             var set = setlist.Sets.First();
 
-            Assert.Equal(8, set.Songs.Count);
-            Assert.Equal("Windowpane", set.Songs.First().Name);
+            Assert.Equal(17, set.Songs.Count);
+
+            var coverSong = set.Songs.ElementAt(8);
+            Assert.Equal("Through Pain to Heaven", coverSong.Name);
+            Assert.NotNull(coverSong.Cover);
+            Assert.Equal("Popol Vuh", coverSong.Cover.Name);
         }
 
         [Fact]

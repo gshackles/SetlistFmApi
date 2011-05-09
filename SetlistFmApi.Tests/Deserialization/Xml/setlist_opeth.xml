@@ -1,30 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<setlist versionId="2bde2cda" tour="Sounds of The Summer" id="23d5fc87" eventDate="27-08-2010">
+<setlist versionId="1bdf21a4" tour="Evolution XX" lastFmEventId="1322608" id="6bd48ebe" eventDate="07-04-2010">
     <artist sortName="Opeth" name="Opeth" mbid="c14b4180-dc87-481e-b17a-64e4150f90f6">
         <url>http://www.setlist.fm/setlists/opeth-63d682c3.html</url>
     </artist>
-    <venue name="Metal Hammer Festival" id="bd6c5ea">
-        <city stateCode="83" state="Silesian Voivodeship" name="Katowice" id="3096472">
-            <coords long="19.0166667" lat="50.2666667"/>
-            <country name="Poland" code="PL"/>
+    <venue name="Terminal 5" id="6bd6227a">
+        <city stateCode="NY" state="New York" name="New York" id="5128581">
+            <coords long="-74.0059729" lat="40.7142691"/>
+            <country name="United States" code="US"/>
         </city>
         <url>
-            http://www.setlist.fm/venue/metal-hammer-festival-katowice-poland-bd6c5ea.html
+            http://www.setlist.fm/venue/terminal-5-new-york-ny-usa-6bd6227a.html
         </url>
     </venue>
     <sets>
         <set>
-            <song name="Windowpane"/>
-            <song name="The Grand Conjuration"/>
-            <song name="The Drapery Falls"/>
-            <song name="The Lotus Eater"/>
-            <song name="The Moor"/>
-            <song name="Demon of the Fall"/>
+            <song name="The Leper Affinity"/>
             <song name="Bleak"/>
-            <song name="Deliverance"/>
+            <song name="Harvest"/>
+            <song name="The Drapery Falls"/>
+            <song name="Dirge for November"/>
+            <song name="The Funeral Portrait"/>
+            <song name="Patterns in the Ivy"/>
+            <song name="Blackwater Park"/>
+            <song name="Through Pain to Heaven">
+                <cover sortName="Popol Vuh" name="Popol Vuh" mbid="2f4bf325-2bbb-4d5f-8681-b0fef130bff0">
+                    <url>
+                        http://www.setlist.fm/setlists/popol-vuh-63d7aa7b.html
+                    </url>
+                </cover>
+            </song>
+            <song name="Forest of October"/>
+            <song name="Advent"/>
+            <song name="April Ethereal"/>
+            <song name="The Moor"/>
+            <song name="Wreath"/>
+            <song name="Hope Leaves"/>
+            <song name="Reverie/Harlequin Forest"/>
+            <song name="The Lotus Eater"/>
         </set>
     </sets>
     <url>
-        http://www.setlist.fm/setlist/opeth/2010/metal-hammer-festival-katowice-poland-23d5fc87.html
+        http://www.setlist.fm/setlist/opeth/2010/terminal-5-new-york-ny-6bd48ebe.html
     </url>
 </setlist>

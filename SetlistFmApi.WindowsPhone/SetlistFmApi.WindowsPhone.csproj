@@ -72,6 +72,9 @@
     <Compile Include="..\SetlistFmApi\Model\Music\Artist.cs">
       <Link>Model\Music\Artist.cs</Link>
     </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Music\CoverInfo.cs">
+      <Link>Model\Music\CoverInfo.cs</Link>
+    </Compile>
     <Compile Include="..\SetlistFmApi\Model\Music\Set.cs">
       <Link>Model\Music\Set.cs</Link>
     </Compile>
@@ -95,6 +98,9 @@
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchOptions\Music\ArtistSearchOptions.cs">
       <Link>SearchOptions\Music\ArtistSearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Music\SetlistSearchOptions.cs">
+      <Link>SearchOptions\Music\SetlistSearchOptions.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchResults\Location\CitySearchResult.cs">
       <Link>SearchResults\Location\CitySearchResult.cs</Link>

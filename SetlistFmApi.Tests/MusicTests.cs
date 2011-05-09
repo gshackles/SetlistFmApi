@@ -28,5 +28,17 @@ namespace SetlistFmApi.Tests
 
             Assert.Equal("Opeth", artist.Name);
         }
+
+        [Fact]
+        public void FindSetlists_ByArtistStateAndYear_CanFindSetlists()
+        {
+            var options = new SetlistSearchOptions() { Year = 2010, ArtistName = "Opeth", StateCode = "NY"};
+
+            var results = _client.FindSetlists(options);
+
+            Assert.NotNull(results);
+            Assert.NotEmpty(results.Setlists);
+            Assert.Equal("Opeth", results.Setlists.First().Artist.Name);
+        }
     }
 }
