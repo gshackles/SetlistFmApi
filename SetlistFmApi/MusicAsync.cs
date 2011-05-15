@@ -30,5 +30,12 @@ namespace SetlistFmApi
 
             executeRequestAsync<SetlistSearchResult>(request, callback);
         }
+
+        public void FindSetlistAsync(string id, Action<Setlist> callback)
+        {
+            var request = createSetlistIdRequest(id);
+
+            executeRequestAsync<Setlist>(request, callback);
+        }
     }
 }

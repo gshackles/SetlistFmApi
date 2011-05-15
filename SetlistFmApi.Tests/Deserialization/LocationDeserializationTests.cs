@@ -27,8 +27,7 @@ namespace SetlistFmApi.Tests.Deserialization
             Assert.Equal("US", city.Country.Code);
         }
 
-        //[Fact]
-        // Not implementing this yet, see http://www.setlist.fm/forum/setlistfm/setlistfm-api/question-about-cities-schema-3bd6bc1c
+        [Fact]
         public void Can_Deserialize_City_Search_Results()
         {
             var result = deserializeFromFile<CitySearchResult>("city_list.xml");
@@ -67,6 +66,20 @@ namespace SetlistFmApi.Tests.Deserialization
             Assert.Equal("Royal Albert Hall", venue.Name);
             Assert.Equal("53d63779", venue.Id);
             Assert.Equal("England", venue.City.State);
+        }
+
+        [Fact]
+        public void Can_Deserialize_Venue_Search_Results()
+        {
+            var result = deserializeFromFile<VenueSearchResult>("venue_list.xml");
+
+            Assert.NotNull(result);
+            Assert.Equal(1, result.Venues.Count);
+
+            var venue = result.Venues.First();
+
+            Assert.Equal("Terminal 5", venue.Name);
+            Assert.Equal("NY", venue.City.StateCode);
         }
     }
 }

@@ -23,5 +23,19 @@ namespace SetlistFmApi
 
             executeRequestAsync<CountrySearchResult>(request, callback);
         }
+
+        public void FindVenuesAsync(VenueSearchOptions options, Action<VenueSearchResult> callback)
+        {
+            var request = createVenueSearchRequest(options);
+
+            executeRequestAsync<VenueSearchResult>(request, callback);
+        }
+
+        public void FindCities(CitySearchOptions options, Action<CitySearchResult> callback)
+        {
+            var request = createCitySearchRequest(options);
+
+            executeRequestAsync<CitySearchResult>(request, callback);
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace SetlistFmApi.Tests
         [Fact]
         public void FindArtist_ById_CanFindArtist()
         {
-            var id = "c14b4180-dc87-481e-b17a-64e4150f90f6";
+            string id = "c14b4180-dc87-481e-b17a-64e4150f90f6";
 
             var artist = _client.FindArtist(id);
 
@@ -39,6 +39,18 @@ namespace SetlistFmApi.Tests
             Assert.NotNull(results);
             Assert.NotEmpty(results.Setlists);
             Assert.Equal("Opeth", results.Setlists.First().Artist.Name);
+            Assert.Equal(new DateTime(2010, 4, 7), results.Setlists.First().EventDate);
+        }
+
+        [Fact]
+        public void FindSetlist_ById_CanFindSetlist()
+        {
+            string id = "3bd6440c";
+
+            var setlist = _client.FindSetlist(id);
+
+            Assert.NotNull(setlist);
+            Assert.Equal("Metallica", setlist.Artist.Name);
         }
     }
 }

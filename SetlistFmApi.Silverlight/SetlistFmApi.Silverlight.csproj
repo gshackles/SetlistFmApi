@@ -56,8 +56,18 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Net" />
     <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Xml.Linq, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SetlistFmApi\Deserialization\CustomDeserializers\CitySearchResultXmlDeserializer.cs">
+      <Link>Deserialization\CustomDeserializers\CitySearchResultXmlDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\CustomDeserializers\ICustomXmlDeserializer.cs">
+      <Link>Deserialization\CustomDeserializers\ICustomXmlDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\SetlistFmXmlDeserializer.cs">
+      <Link>Deserialization\SetlistFmXmlDeserializer.cs</Link>
+    </Compile>
     <Compile Include="..\SetlistFmApi\Location.cs">
       <Link>Location.cs</Link>
     </Compile>
@@ -100,8 +110,14 @@
     <Compile Include="..\SetlistFmApi\SearchOptions\ListOptionsBase.cs">
       <Link>SearchOptions\ListOptionsBase.cs</Link>
     </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Location\CitySearchOptions.cs">
+      <Link>SearchOptions\Location\CitySearchOptions.cs</Link>
+    </Compile>
     <Compile Include="..\SetlistFmApi\SearchOptions\Location\CountrySearchOptions.cs">
       <Link>SearchOptions\Location\CountrySearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Location\VenueSearchOptions.cs">
+      <Link>SearchOptions\Location\VenueSearchOptions.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchOptions\Music\ArtistSearchOptions.cs">
       <Link>SearchOptions\Music\ArtistSearchOptions.cs</Link>
@@ -114,6 +130,9 @@
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchResults\Location\CountrySearchResult.cs">
       <Link>SearchResults\Location\CountrySearchResult.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchResults\Location\VenueSearchResult.cs">
+      <Link>SearchResults\Location\VenueSearchResult.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchResults\Music\ArtistSearchResult.cs">
       <Link>SearchResults\Music\ArtistSearchResult.cs</Link>

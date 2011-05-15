@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deserialization\CustomDeserializers\CitySearchResultXmlDeserializer.cs" />
+    <Compile Include="Deserialization\CustomDeserializers\ICustomXmlDeserializer.cs" />
+    <Compile Include="Deserialization\SetlistFmXmlDeserializer.cs" />
     <Compile Include="Location.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -83,6 +86,7 @@
     <Compile Include="SearchOptions\ListOptionsBase.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SearchOptions\Location\CitySearchOptions.cs" />
     <Compile Include="SearchOptions\Location\CountrySearchOptions.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -90,12 +94,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SearchOptions\Music\SetlistSearchOptions.cs" />
+    <Compile Include="SearchOptions\Location\VenueSearchOptions.cs" />
     <Compile Include="SearchResults\Location\CitySearchResult.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SearchResults\Location\CountrySearchResult.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SearchResults\Location\VenueSearchResult.cs" />
     <Compile Include="SearchResults\Music\ArtistSearchResult.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -109,7 +115,6 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

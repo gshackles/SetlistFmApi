@@ -3,6 +3,7 @@ using System.IO;
 using System.Xml.Linq;
 using RestSharp;
 using RestSharp.Deserializers;
+using SetlistFmApi.Deserialization;
 
 namespace SetlistFmApi.Tests.Deserialization
 {
@@ -12,16 +13,11 @@ namespace SetlistFmApi.Tests.Deserialization
         
         protected T deserializeFromFile<T>(string filename) where T : new()
         {
-            var deserializer = new XmlDeserializer()
-                                   {
-                                       DateFormat = "dd-MM-yyyy"
-                                   };
+            var deserializer = new SetlistFmXmlDeserializer();
+
             string path = Path.Combine(_sampleDataPath, filename);
             var doc = XDocument.Load(path);
-            var response = new RestResponse()
-                                {
-                                    Content = doc.ToString()
-                                };
+            var response = new RestResponse() { Content = doc.ToString() };
             
             return deserializer.Deserialize<T>(response);
         }

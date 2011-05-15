@@ -31,7 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RestSharp, Version=101.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="RestSharp, Version=101.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\References\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,7 +78,10 @@
     <Content Include="Deserialization\Xml\setlist_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\setlist_opeth.xml">
+    <Content Include="Deserialization\Xml\setlist_metallica.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Deserialization\Xml\venue_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Deserialization\Xml\venue_royalalbert.xml">

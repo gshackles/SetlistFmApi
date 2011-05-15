@@ -33,6 +33,13 @@ namespace SetlistFmApi
 
             return executeRequest<SetlistSearchResult>(request);
         }
+
+        public Setlist FindSetlist(string id)
+        {
+            var request = createSetlistIdRequest(id);
+
+            return executeRequest<Setlist>(request);
+        }
 #endif
 
         private RestRequest createArtistSearchRequest(ArtistSearchOptions options)
@@ -103,6 +110,14 @@ namespace SetlistFmApi
 
             if (!string.IsNullOrEmpty(options.LanguageCode))
                 request.AddParameter("l", options.LanguageCode);
+
+            return request;
+        }
+
+        private RestRequest createSetlistIdRequest(string id)
+        {
+            var request = new RestRequest();
+            request.Resource = "setlist/" + id;
 
             return request;
         }

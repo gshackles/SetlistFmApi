@@ -44,26 +44,30 @@ namespace SetlistFmApi.Tests.Deserialization
         [Fact]
         public void Can_Deserialize_Setlist()
         {
-            var setlist = deserializeFromFile<Setlist>("setlist_opeth.xml");
+            var setlist = deserializeFromFile<Setlist>("setlist_metallica.xml");
 
             Assert.NotNull(setlist);
-            Assert.Equal("1bdf21a4", setlist.VersionId);
-            Assert.Equal("Evolution XX", setlist.Tour);
-            Assert.Equal("6bd48ebe", setlist.Id);
-            Assert.Equal("1322608", setlist.LastFmEventId);
-            Assert.Equal(new DateTime(2010, 4, 7), setlist.EventDate);
-            Assert.Equal("Opeth", setlist.Artist.Name);
-            Assert.Equal("Terminal 5", setlist.Venue.Name);
-            Assert.Equal(1, setlist.Sets.Count);
+            Assert.Equal("73dc6219", setlist.VersionId);
+            Assert.Equal("World Magnetic", setlist.Tour);
+            Assert.Equal("3bd6440c", setlist.Id);
+            Assert.Equal(new DateTime(2009, 7, 25), setlist.EventDate);
+            Assert.Equal("Metallica", setlist.Artist.Name);
+            Assert.Equal("Sonisphere Festival", setlist.Venue.Name);
+            Assert.Equal(2, setlist.Sets.Count);
 
             var set = setlist.Sets.First();
 
-            Assert.Equal(17, set.Songs.Count);
+            Assert.Equal(16, set.Songs.Count);
 
-            var coverSong = set.Songs.ElementAt(8);
-            Assert.Equal("Through Pain to Heaven", coverSong.Name);
+            var coverSong = set.Songs.ElementAt(0);
+            Assert.Equal("The Ecstasy of Gold", coverSong.Name);
             Assert.NotNull(coverSong.Cover);
-            Assert.Equal("Popol Vuh", coverSong.Cover.Name);
+            Assert.Equal("Ennio Morricone", coverSong.Cover.Name);
+
+            var encore = setlist.Sets.ElementAt(1);
+
+            Assert.Equal(3, encore.Songs.Count);
+            Assert.True(encore.Encore);
         }
 
         [Fact]
@@ -77,6 +81,7 @@ namespace SetlistFmApi.Tests.Deserialization
             var setlist = results.Setlists.First();
 
             Assert.Equal("Sounds of The Summer", setlist.Tour);
+            Assert.Equal(new DateTime(2010, 8, 27), setlist.EventDate);
         }
     }
 }
