@@ -5,24 +5,32 @@ using RestSharp;
 using SetlistFmApi.Model.Location;
 using SetlistFmApi.SearchOptions.Location;
 using SetlistFmApi.SearchResults.Location;
+using SetlistFmApi.SearchResults.Music;
 
 namespace SetlistFmApi
 {
     public partial class SetlistFmApi
     {
 #if (!__ANDROID__ && !SILVERLIGHT && !WINDOWS_PHONE)
-        public City FindCity(string id)
+        public City FindCity(string cityId)
         {
-            var request = createCityIdRequest(id);
+            var request = createCityIdRequest(cityId);
 
             return executeRequest<City>(request);
         }
 
-        public CountrySearchResult FindCountries(CountrySearchOptions options)
+        public CountrySearchResult FindCountries()
         {
-            var request = createCountrySearchRequest(options);
+            var request = createCountrySearchRequest();
 
             return executeRequest<CountrySearchResult>(request);
+        }
+
+        public Venue FindVenue(string venueId)
+        {
+            var request = createVenueIdRequest(venueId);
+
+            return executeRequest<Venue>(request);
         }
 
         public VenueSearchResult FindVenues(VenueSearchOptions options)
@@ -38,23 +46,29 @@ namespace SetlistFmApi
 
             return executeRequest<CitySearchResult>(request);
         }
+
+        public SetlistSearchResult FindSetlistsByVenue(SetlistByVenueSearchOptions options)
+        {
+            var request = createSetlistByVenueSearchRequest(options);
+
+            return executeRequest<SetlistSearchResult>(request);
+        }
 #endif
 
-        private RestRequest createCityIdRequest(string id)
+        private RestRequest createVenueIdRequest(string venueId)
         {
             var request = new RestRequest();
-            request.Resource = "city/" + id;
+            request.Resource = "venue/{VenueId}";
+
+            request.AddUrlSegment("VenueId", venueId);
 
             return request;
         }
 
-        private RestRequest createCountrySearchRequest(CountrySearchOptions options)
+        private RestRequest createCountrySearchRequest()
         {
             var request = new RestRequest();
             request.Resource = "search/countries";
-
-            if (!string.IsNullOrEmpty(options.LanguageCode))
-                request.AddParameter("l", options.LanguageCode);
 
             return request;
         }
@@ -85,9 +99,6 @@ namespace SetlistFmApi
             if (options.Page.HasValue)
                 request.AddParameter("p", options.Page.Value);
 
-            if (!string.IsNullOrEmpty(options.LanguageCode))
-                request.AddParameter("l", options.LanguageCode);
-
             return request;
         }
 
@@ -111,8 +122,28 @@ namespace SetlistFmApi
             if (options.Page.HasValue)
                 request.AddParameter("p", options.Page.Value);
 
-            if (!string.IsNullOrEmpty(options.LanguageCode))
-                request.AddParameter("l", options.LanguageCode);
+            return request;
+        }
+
+        private RestRequest createCityIdRequest(string cityId)
+        {
+            var request = new RestRequest();
+            request.Resource = "city/{CityId}";
+
+            request.AddUrlSegment("CityId", cityId);
+
+            return request;
+        }
+
+        private RestRequest createSetlistByVenueSearchRequest(SetlistByVenueSearchOptions options)
+        {
+            var request = new RestRequest();
+            request.Resource = "venue/{VenueId}/setlists";
+
+            request.AddUrlSegment("VenueId", options.VenueId);
+
+            if (options.Page.HasValue)
+                request.AddParameter("p", options.Page.Value);
 
             return request;
         }

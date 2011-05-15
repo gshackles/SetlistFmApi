@@ -76,6 +76,7 @@
     <Compile Include="Model\Music\Song.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\Users\User.cs" />
     <Compile Include="Music.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -87,14 +88,16 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SearchOptions\Location\CitySearchOptions.cs" />
-    <Compile Include="SearchOptions\Location\CountrySearchOptions.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="SearchOptions\Location\SetlistByVenueSearchOptions.cs" />
     <Compile Include="SearchOptions\Music\ArtistSearchOptions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SearchOptions\Music\SetlistByArtistSearchOptions.cs" />
+    <Compile Include="SearchOptions\Music\SetlistByTourSearchOptions.cs" />
     <Compile Include="SearchOptions\Music\SetlistSearchOptions.cs" />
     <Compile Include="SearchOptions\Location\VenueSearchOptions.cs" />
+    <Compile Include="SearchOptions\Users\UserAttendedSearchOptions.cs" />
+    <Compile Include="SearchOptions\Users\UserEditedSearchOptions.cs" />
     <Compile Include="SearchResults\Location\CitySearchResult.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -114,6 +117,8 @@
     <Compile Include="SetlistFmApi.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Users.cs" />
+    <Compile Include="UsersAsync.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

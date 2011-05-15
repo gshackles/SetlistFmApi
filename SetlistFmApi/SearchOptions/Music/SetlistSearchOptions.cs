@@ -30,7 +30,5 @@ namespace SetlistFmApi.SearchOptions.Music
         public string State { get; set; }
 
         public string CountryCode { get; set; }
-
-        public string LanguageCode { get; set; }
     }
 }

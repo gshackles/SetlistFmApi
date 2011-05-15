@@ -5,8 +5,8 @@ using System.Text;
 
 namespace SetlistFmApi.SearchOptions.Location
 {
-    public class CountrySearchOptions
+    public class SetlistByVenueSearchOptions : ListOptionsBase
     {
-        public string LanguageCode { get; set; }
+        public string VenueId { get; set; }
     }
 }

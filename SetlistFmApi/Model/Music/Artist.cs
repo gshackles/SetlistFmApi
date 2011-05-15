@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RestSharp.Serializers;
+using RestSharp.Deserializers;
 
 namespace SetlistFmApi.Model.Music
 {

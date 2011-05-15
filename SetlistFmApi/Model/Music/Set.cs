@@ -7,7 +7,7 @@ namespace SetlistFmApi.Model.Music
 {
     public class Set
     {
-        public bool Encore { get; set; }
+        public int? Encore { get; set; }
 
         public List<Song> Songs { get; set; }
     }

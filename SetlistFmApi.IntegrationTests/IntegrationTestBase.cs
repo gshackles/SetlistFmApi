@@ -5,13 +5,13 @@ using System.Text;
 
 namespace SetlistFmApi.Tests
 {
-    public abstract class SetlistFmApiTestBase
+    public abstract class IntegrationTestBase
     {
         protected SetlistFmApi _client;
 
-        public SetlistFmApiTestBase()
+        public IntegrationTestBase()
         {
-            _client = new SetlistFmApi("");
+            _client = new SetlistFmApi(null);
         }
     }
 }

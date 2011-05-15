@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FABEA9DE-E24E-4174-97A7-A1A7B2222235}</ProjectGuid>
+    <ProjectGuid>{E4E81AC7-838E-4066-BED7-6D57F1845445}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SetlistFmApi.Tests</RootNamespace>
-    <AssemblyName>SetlistFmApi.Tests</AssemblyName>
+    <RootNamespace>SetlistFmApi.IntegrationTests</RootNamespace>
+    <AssemblyName>SetlistFmApi.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,7 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RestSharp, Version=101.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="RestSharp">
       <HintPath>..\References\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -45,49 +45,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deserialization\UserDeserializationTests.cs" />
-    <Compile Include="Deserialization\MusicDeserializationTests.cs" />
-    <Compile Include="Deserialization\DeserializationTestBase.cs" />
-    <Compile Include="Deserialization\LocationDeserializationTests.cs" />
+    <Compile Include="LocationTests.cs" />
+    <Compile Include="MusicTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IntegrationTestBase.cs" />
+    <Compile Include="UserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SetlistFmApi\SetlistFmApi.csproj">
       <Project>{943090BC-15EC-4B64-8042-F178328C40E1}</Project>
       <Name>SetlistFmApi</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Deserialization\Xml\artist_list.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\artist_opeth.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\city_list.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\city_sanjose.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\country_list.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\setlist_list.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\setlist_metallica.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\user_gshackles.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\venue_list.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Deserialization\Xml\venue_royalalbert.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.WindowsPhone",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.Silverlight", "SetlistFmApi.Silverlight\SetlistFmApi.Silverlight.csproj", "{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetlistFmApi.IntegrationTests", "SetlistFmApi.IntegrationTests\SetlistFmApi.IntegrationTests.csproj", "{E4E81AC7-838E-4066-BED7-6D57F1845445}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5CA4357-A5C3-4436-AB5A-D5DF0CF700BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4E81AC7-838E-4066-BED7-6D57F1845445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4E81AC7-838E-4066-BED7-6D57F1845445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4E81AC7-838E-4066-BED7-6D57F1845445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4E81AC7-838E-4066-BED7-6D57F1845445}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

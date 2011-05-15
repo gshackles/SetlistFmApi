@@ -94,6 +94,9 @@
     <Compile Include="..\SetlistFmApi\Model\Music\Song.cs">
       <Link>Model\Music\Song.cs</Link>
     </Compile>
+    <Compile Include="..\SetlistFmApi\Model\Users\User.cs">
+      <Link>Model\Users\User.cs</Link>
+    </Compile>
     <Compile Include="..\SetlistFmApi\Music.cs">
       <Link>Music.cs</Link>
     </Compile>
@@ -106,8 +109,8 @@
     <Compile Include="..\SetlistFmApi\SearchOptions\Location\CitySearchOptions.cs">
       <Link>SearchOptions\Location\CitySearchOptions.cs</Link>
     </Compile>
-    <Compile Include="..\SetlistFmApi\SearchOptions\Location\CountrySearchOptions.cs">
-      <Link>SearchOptions\Location\CountrySearchOptions.cs</Link>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Location\SetlistByVenueSearchOptions.cs">
+      <Link>SearchOptions\Location\SetlistByVenueSearchOptions.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchOptions\Location\VenueSearchOptions.cs">
       <Link>SearchOptions\Location\VenueSearchOptions.cs</Link>
@@ -115,8 +118,20 @@
     <Compile Include="..\SetlistFmApi\SearchOptions\Music\ArtistSearchOptions.cs">
       <Link>SearchOptions\Music\ArtistSearchOptions.cs</Link>
     </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Music\SetlistByArtistSearchOptions.cs">
+      <Link>SearchOptions\Music\SetlistByArtistSearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Music\SetlistByTourSearchOptions.cs">
+      <Link>SearchOptions\Music\SetlistByTourSearchOptions.cs</Link>
+    </Compile>
     <Compile Include="..\SetlistFmApi\SearchOptions\Music\SetlistSearchOptions.cs">
       <Link>SearchOptions\Music\SetlistSearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Users\UserAttendedSearchOptions.cs">
+      <Link>SearchOptions\Users\UserAttendedSearchOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\SearchOptions\Users\UserEditedSearchOptions.cs">
+      <Link>SearchOptions\Users\UserEditedSearchOptions.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\SearchResults\Location\CitySearchResult.cs">
       <Link>SearchResults\Location\CitySearchResult.cs</Link>
@@ -138,6 +153,12 @@
     </Compile>
     <Compile Include="..\SetlistFmApi\SetlistFmApi.cs">
       <Link>SetlistFmApi.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Users.cs">
+      <Link>Users.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\UsersAsync.cs">
+      <Link>UsersAsync.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

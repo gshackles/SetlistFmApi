@@ -67,7 +67,8 @@ namespace SetlistFmApi.Tests.Deserialization
             var encore = setlist.Sets.ElementAt(1);
 
             Assert.Equal(3, encore.Songs.Count);
-            Assert.True(encore.Encore);
+            Assert.NotNull(encore.Encore);
+            Assert.Equal(1, encore.Encore.Value);
         }
 
         [Fact]

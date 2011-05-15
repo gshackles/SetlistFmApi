@@ -20,9 +20,9 @@ namespace SetlistFmApi
             return executeRequest<ArtistSearchResult>(request);
         }
 
-        public Artist FindArtist(string id)
+        public Artist FindArtist(string mbId)
         {
-            var request = createArtistIdRequest(id);
+            var request = createArtistIdRequest(mbId);
 
             return executeRequest<Artist>(request);
         }
@@ -34,11 +34,39 @@ namespace SetlistFmApi
             return executeRequest<SetlistSearchResult>(request);
         }
 
-        public Setlist FindSetlist(string id)
+        public SetlistSearchResult FindSetlistsByArtist(SetlistByArtistSearchOptions options)
         {
-            var request = createSetlistIdRequest(id);
+            var request = createSetlistByArtistRequest(options);
+
+            return executeRequest<SetlistSearchResult>(request);
+        }
+
+        public Setlist FindSetlist(string setlistId)
+        {
+            var request = createSetlistIdRequest(setlistId);
 
             return executeRequest<Setlist>(request);
+        }
+
+        public Setlist FindSetlistByLastFmEvent(string lastFmEventId)
+        {
+            var request = createSetlistByLastFmEventRequest(lastFmEventId);
+
+            return executeRequest<Setlist>(request);
+        }
+
+        public Setlist FindSetlistByVersion(string versionId)
+        {
+            var request = createSetlistByVersionRequest(versionId);
+
+            return executeRequest<Setlist>(request);
+        }
+
+        public SetlistSearchResult FindSetlistsByTour(SetlistByTourSearchOptions options)
+        {
+            var request = createSetlistByTourSearchRequest(options);
+
+            return executeRequest<SetlistSearchResult>(request);
         }
 #endif
 
@@ -56,10 +84,12 @@ namespace SetlistFmApi
             return request;
         }
 
-        private RestRequest createArtistIdRequest(string id)
+        private RestRequest createArtistIdRequest(string mbId)
         {
             var request = new RestRequest();
-            request.Resource = "artist/" + id;
+            request.Resource = "artist/{ArtistId}";
+
+            request.AddUrlSegment("ArtistId", mbId);
 
             return request;
         }
@@ -108,16 +138,59 @@ namespace SetlistFmApi
             if (options.Page.HasValue)
                 request.AddParameter("p", options.Page.Value);
 
-            if (!string.IsNullOrEmpty(options.LanguageCode))
-                request.AddParameter("l", options.LanguageCode);
+            return request;
+        }
+
+        private RestRequest createSetlistIdRequest(string setlistId)
+        {
+            var request = new RestRequest();
+            request.Resource = "setlist/{SetlistId}";
+
+            request.AddUrlSegment("SetlistId", setlistId);
 
             return request;
         }
 
-        private RestRequest createSetlistIdRequest(string id)
+        private RestRequest createSetlistByArtistRequest(SetlistByArtistSearchOptions options)
         {
             var request = new RestRequest();
-            request.Resource = "setlist/" + id;
+            request.Resource = "artist/{ArtistId}/setlists";
+
+            request.AddUrlSegment("ArtistId", options.MbId);
+
+            if (options.Page.HasValue)
+                request.AddParameter("p", options.Page.Value);
+
+            return request;
+        }
+
+        private RestRequest createSetlistByLastFmEventRequest(string lastFmEventId)
+        {
+            var request = new RestRequest();
+            request.Resource = "setlist/lastFm/{LastFmEventId}";
+
+            request.AddUrlSegment("LastFmEventId", lastFmEventId);
+
+            return request;
+        }
+
+        private RestRequest createSetlistByVersionRequest(string versionId)
+        {
+            var request = new RestRequest();
+            request.Resource = "setlist/version/{VersionId}";
+
+            request.AddUrlSegment("VersionId", versionId);
+
+            return request;
+        }
+
+        private RestRequest createSetlistByTourSearchRequest(SetlistByTourSearchOptions options)
+        {
+            var request = new RestRequest();
+            request.Resource = "artist/{ArtistId}/tour/{TourName}";
+
+            request.AddUrlSegment("ArtistId", options.MbId);
+            request.AddUrlSegment("TourName", options.Tour);
 
             return request;
         }

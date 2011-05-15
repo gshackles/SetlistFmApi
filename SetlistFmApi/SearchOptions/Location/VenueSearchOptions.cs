@@ -17,7 +17,5 @@ namespace SetlistFmApi.SearchOptions.Location
         public string State { get; set; }
 
         public string Country { get; set; }
-
-        public string LanguageCode { get; set; }
     }
 }

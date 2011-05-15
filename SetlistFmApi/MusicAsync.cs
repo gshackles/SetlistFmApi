@@ -17,9 +17,9 @@ namespace SetlistFmApi
             executeRequestAsync<ArtistSearchResult>(request, callback);
         }
 
-        public void FindArtistAsync(string id, Action<Artist> callback)
+        public void FindArtistAsync(string mbId, Action<Artist> callback)
         {
-            var request = createArtistIdRequest(id);
+            var request = createArtistIdRequest(mbId);
 
             executeRequestAsync<Artist>(request, callback);
         }
@@ -31,11 +31,39 @@ namespace SetlistFmApi
             executeRequestAsync<SetlistSearchResult>(request, callback);
         }
 
-        public void FindSetlistAsync(string id, Action<Setlist> callback)
+        public void FindSetlistsByArtistAsync(SetlistByArtistSearchOptions options, Action<SetlistSearchResult> callback)
         {
-            var request = createSetlistIdRequest(id);
+            var request = createSetlistByArtistRequest(options);
+
+            executeRequestAsync<SetlistSearchResult>(request, callback);
+        }
+
+        public void FindSetlistAsync(string setlistId, Action<Setlist> callback)
+        {
+            var request = createSetlistIdRequest(setlistId);
 
             executeRequestAsync<Setlist>(request, callback);
+        }
+
+        public void FindSetlistByLastFmEventAsync(string lastFmEventId, Action<Setlist> callback)
+        {
+            var request = createSetlistByLastFmEventRequest(lastFmEventId);
+
+            executeRequestAsync<Setlist>(request, callback);
+        }
+
+        public void FindSetlistByVersionAsync(string versionId, Action<Setlist> callback)
+        {
+            var request = createSetlistByVersionRequest(versionId);
+
+            executeRequestAsync<Setlist>(request, callback);
+        }
+
+        public void FindSetlistsByTour(SetlistByTourSearchOptions options, Action<SetlistSearchResult> callback)
+        {
+            var request = createSetlistByTourSearchRequest(options);
+
+            executeRequestAsync<SetlistSearchResult>(request, callback);
         }
     }
 }
