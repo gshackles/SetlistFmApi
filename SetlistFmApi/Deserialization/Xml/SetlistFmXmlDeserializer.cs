@@ -2,10 +2,10 @@
 using RestSharp.Deserializers;
 using System;
 using System.Collections.Generic;
-using SetlistFmApi.Deserialization.CustomDeserializers;
 using SetlistFmApi.SearchResults.Location;
+using SetlistFmApi.Deserialization.Xml.CustomDeserializers;
 
-namespace SetlistFmApi.Deserialization
+namespace SetlistFmApi.Deserialization.Xml
 {
     public class SetlistFmXmlDeserializer : IDeserializer
     {

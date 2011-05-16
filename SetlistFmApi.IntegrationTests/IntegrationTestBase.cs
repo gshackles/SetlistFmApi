@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SetlistFmApi.Tests
+namespace SetlistFmApi.IntegrationTests
 {
     public abstract class IntegrationTestBase
     {

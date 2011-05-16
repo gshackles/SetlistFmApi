@@ -5,7 +5,7 @@ using SetlistFmApi.Model.Location;
 using SetlistFmApi.SearchResults;
 using SetlistFmApi.SearchResults.Location;
 
-namespace SetlistFmApi.Deserialization.CustomDeserializers
+namespace SetlistFmApi.Deserialization.Xml.CustomDeserializers
 {
     public class CitySearchResultXmlDeserializer : ICustomXmlDeserializer
     {

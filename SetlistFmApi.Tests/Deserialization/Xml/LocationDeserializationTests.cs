@@ -7,7 +7,7 @@ using SetlistFmApi.Model.Location;
 using SetlistFmApi.SearchResults.Location;
 using Xunit;
 
-namespace SetlistFmApi.Tests.Deserialization
+namespace SetlistFmApi.Tests.Deserialization.Xml
 {
     public class LocationDeserializationTests : DeserializationTestBase
     {

@@ -1,6 +1,6 @@
 ﻿using RestSharp;
 
-namespace SetlistFmApi.Deserialization.CustomDeserializers
+namespace SetlistFmApi.Deserialization
 {
     public interface ICustomXmlDeserializer
     {

@@ -5,7 +5,7 @@ using System.Text;
 using SetlistFmApi.SearchOptions.Music;
 using Xunit;
 
-namespace SetlistFmApi.Tests
+namespace SetlistFmApi.IntegrationTests.Xml
 {
     public class MusicTests : IntegrationTestBase
     {

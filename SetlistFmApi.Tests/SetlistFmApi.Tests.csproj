@@ -45,10 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deserialization\UserDeserializationTests.cs" />
-    <Compile Include="Deserialization\MusicDeserializationTests.cs" />
+    <Compile Include="Deserialization\Json\LocationDeserializationTests.cs" />
+    <Compile Include="Deserialization\Json\MusicDeserializationTests.cs" />
+    <Compile Include="Deserialization\Json\UserDeserializationTests.cs" />
+    <Compile Include="Deserialization\Xml\UserDeserializationTests.cs" />
+    <Compile Include="Deserialization\Xml\MusicDeserializationTests.cs" />
     <Compile Include="Deserialization\DeserializationTestBase.cs" />
-    <Compile Include="Deserialization\LocationDeserializationTests.cs" />
+    <Compile Include="Deserialization\Xml\LocationDeserializationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,36 +61,42 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Deserialization\Xml\artist_list.xml">
+    <Content Include="Deserialization\SampleData\Xml\artist_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\artist_opeth.xml">
+    <Content Include="Deserialization\SampleData\Xml\artist_opeth.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\city_list.xml">
+    <Content Include="Deserialization\SampleData\Xml\city_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\city_sanjose.xml">
+    <Content Include="Deserialization\SampleData\Xml\city_sanjose.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\country_list.xml">
+    <Content Include="Deserialization\SampleData\Xml\country_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\setlist_list.xml">
+    <Content Include="Deserialization\SampleData\Xml\setlist_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\setlist_metallica.xml">
+    <Content Include="Deserialization\SampleData\Xml\setlist_metallica.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\user_gshackles.xml">
+    <Content Include="Deserialization\SampleData\Xml\user_gshackles.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\venue_list.xml">
+    <Content Include="Deserialization\SampleData\Xml\venue_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\Xml\venue_royalalbert.xml">
+    <Content Include="Deserialization\SampleData\Xml\venue_royalalbert.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Deserialization\SampleData\Json\city_sanjose.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

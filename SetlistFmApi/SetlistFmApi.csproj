@@ -42,9 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deserialization\CustomDeserializers\CitySearchResultXmlDeserializer.cs" />
-    <Compile Include="Deserialization\CustomDeserializers\ICustomXmlDeserializer.cs" />
-    <Compile Include="Deserialization\SetlistFmXmlDeserializer.cs" />
+    <Compile Include="Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs" />
+    <Compile Include="Deserialization\ICustomXmlDeserializer.cs" />
+    <Compile Include="Deserialization\Xml\SetlistFmXmlDeserializer.cs" />
     <Compile Include="Location.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -119,6 +119,9 @@
     </Compile>
     <Compile Include="Users.cs" />
     <Compile Include="UsersAsync.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Deserialization\Json\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

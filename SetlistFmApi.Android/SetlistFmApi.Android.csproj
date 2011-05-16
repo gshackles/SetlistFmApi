@@ -42,14 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SetlistFmApi\Deserialization\CustomDeserializers\CitySearchResultXmlDeserializer.cs">
-      <Link>Deserialization\CustomDeserializers\CitySearchResultXmlDeserializer.cs</Link>
+    <Compile Include="..\SetlistFmApi\Deserialization\ICustomXmlDeserializer.cs">
+      <Link>Deserialization\ICustomXmlDeserializer.cs</Link>
     </Compile>
-    <Compile Include="..\SetlistFmApi\Deserialization\CustomDeserializers\ICustomXmlDeserializer.cs">
-      <Link>Deserialization\CustomDeserializers\ICustomXmlDeserializer.cs</Link>
+    <Compile Include="..\SetlistFmApi\Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs">
+      <Link>Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs</Link>
     </Compile>
-    <Compile Include="..\SetlistFmApi\Deserialization\SetlistFmXmlDeserializer.cs">
-      <Link>Deserialization\SetlistFmXmlDeserializer.cs</Link>
+    <Compile Include="..\SetlistFmApi\Deserialization\Xml\SetlistFmXmlDeserializer.cs">
+      <Link>Deserialization\Xml\SetlistFmXmlDeserializer.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\Location.cs">
       <Link>Location.cs</Link>
@@ -152,7 +152,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Deserialization\Json\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

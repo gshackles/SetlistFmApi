@@ -5,7 +5,7 @@ using System.Text;
 using SetlistFmApi.SearchOptions.Location;
 using Xunit;
 
-namespace SetlistFmApi.Tests
+namespace SetlistFmApi.IntegrationTests.Xml
 {
     public class LocationTests : IntegrationTestBase
     {

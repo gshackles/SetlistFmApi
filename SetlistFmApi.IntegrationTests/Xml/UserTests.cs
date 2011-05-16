@@ -5,7 +5,7 @@ using System.Text;
 using Xunit;
 using SetlistFmApi.SearchOptions.Users;
 
-namespace SetlistFmApi.Tests
+namespace SetlistFmApi.IntegrationTests.Xml
 {
     public class UserTests : IntegrationTestBase
     {

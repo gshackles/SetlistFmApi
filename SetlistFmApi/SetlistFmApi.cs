@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RestSharp;
 using SetlistFmApi.Deserialization;
+using SetlistFmApi.Deserialization.Xml;
 
 namespace SetlistFmApi
 {
@@ -12,19 +13,22 @@ namespace SetlistFmApi
         private const string _baseUrl = "http://api.setlist.fm/rest/0.1";
         private RestClient _client;
         private readonly string _apiKey;
-        private SetlistFmXmlDeserializer _deserializer;
+        private SetlistFmXmlDeserializer _xmlDeserializer;
+
+        public DataFormat Format { get; set; }
 
         public SetlistFmApi(string apiKey)
         {
-            _deserializer = new SetlistFmXmlDeserializer();
+            _xmlDeserializer = new SetlistFmXmlDeserializer();
             _apiKey = apiKey;
             _client = new RestClient();
             _client.BaseUrl = _baseUrl;
+            Format = DataFormat.Xml;
 
             _client.ClearHandlers();
-            _client.AddHandler("text/xml", _deserializer);
-            _client.AddHandler("application/xml", _deserializer);
-            _client.AddHandler("*", _deserializer);
+            _client.AddHandler("text/xml", _xmlDeserializer);
+            _client.AddHandler("application/xml", _xmlDeserializer);
+            _client.AddHandler("*", _xmlDeserializer);
         }
 
 #if (!__ANDROID__ && !SILVERLIGHT && !WINDOWS_PHONE)
@@ -45,6 +49,10 @@ namespace SetlistFmApi
 
         private void prepareRequest(RestRequest request)
         {
+            if (Format == DataFormat.Json)
+                throw new NotImplementedException("JSON not supported yet");
+
+            request.RequestFormat = Format;
             request.DateFormat = "dd-MM-yyyy";
         }
     }

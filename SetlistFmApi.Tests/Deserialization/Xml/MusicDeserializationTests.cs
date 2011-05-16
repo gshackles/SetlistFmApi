@@ -8,7 +8,7 @@ using SetlistFmApi.Model.Music;
 using SetlistFmApi.SearchResults.Music;
 using Xunit;
 
-namespace SetlistFmApi.Tests.Deserialization
+namespace SetlistFmApi.Tests.Deserialization.Xml
 {
     public class MusicDeserializationTests : DeserializationTestBase
     {

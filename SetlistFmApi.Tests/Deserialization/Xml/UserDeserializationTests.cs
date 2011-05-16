@@ -5,7 +5,7 @@ using System.Text;
 using Xunit;
 using SetlistFmApi.Model.Users;
 
-namespace SetlistFmApi.Tests.Deserialization
+namespace SetlistFmApi.Tests.Deserialization.Xml
 {
     public class UserDeserializationTests : DeserializationTestBase
     {
