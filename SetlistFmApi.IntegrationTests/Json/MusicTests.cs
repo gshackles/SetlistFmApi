@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SetlistFmApi.SearchOptions.Location;
+using SetlistFmApi.SearchOptions.Music;
 using Xunit;
 using RestSharp;
 
-namespace SetlistFmApi.IntegrationTests.Xml
+namespace SetlistFmApi.IntegrationTests.Json
 {
-    public class LocationTests : LocationTestsBase
+    public class MusicTests : MusicTestsBase
     {
         public override DataFormat Format
         {
-            get { return DataFormat.Xml; }
+            get { return DataFormat.Json; }
         }
     }
 }

@@ -4,22 +4,15 @@ using System.Linq;
 using System.Text;
 using Xunit;
 using SetlistFmApi.Model.Users;
+using RestSharp;
 
 namespace SetlistFmApi.Tests.Deserialization.Xml
 {
-    public class UserDeserializationTests : DeserializationTestBase
+    public class UserDeserializationTests : UserDeserializationTestsBase
     {
-        [Fact]
-        public void Can_Deserialize_User()
+        public override DataFormat Format
         {
-            var user = deserializeFromFile<User>("user_gshackles.xml");
-
-            Assert.Equal("http://www.gregshackles.com", user.Website);
-            Assert.Equal("gshackles", user.UserId);
-            Assert.Equal("gshackles", user.Twitter);
-            Assert.Equal("demonofthefall9", user.LastFm);
-            Assert.Equal("Greg Shackles", user.FullName);
-            Assert.Contains("beer", user.About);
+            get { return DataFormat.Xml; }
         }
     }
 }

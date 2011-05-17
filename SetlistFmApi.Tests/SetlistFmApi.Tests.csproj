@@ -45,13 +45,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deserialization\Json\LocationDeserializationTests.cs" />
-    <Compile Include="Deserialization\Json\MusicDeserializationTests.cs" />
-    <Compile Include="Deserialization\Json\UserDeserializationTests.cs" />
-    <Compile Include="Deserialization\Xml\UserDeserializationTests.cs" />
-    <Compile Include="Deserialization\Xml\MusicDeserializationTests.cs" />
+    <Compile Include="Deserialization\IDeserializer.cs" />
+    <Compile Include="Deserialization\Json\LocationDeserializationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deserialization\Json\MusicDeserializationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deserialization\Json\UserDeserializationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deserialization\LocationDeserializationTestsBase.cs" />
+    <Compile Include="Deserialization\MusicDeserializationTestsBase.cs" />
+    <Compile Include="Deserialization\UserDeserializationTestsBase.cs" />
     <Compile Include="Deserialization\DeserializationTestBase.cs" />
-    <Compile Include="Deserialization\Xml\LocationDeserializationTests.cs" />
+    <Compile Include="Deserialization\Xml\LocationDeserializationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deserialization\Xml\MusicDeserializationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Deserialization\Xml\UserDeserializationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -61,40 +77,67 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Deserialization\SampleData\Xml\artist_list.xml">
+    <None Include="Deserialization\SampleData\json\artist_list.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\artist_opeth.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\setlist_list.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\setlist_metallica.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\user_gshackles.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\venue_list.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Deserialization\SampleData\xml\artist_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\artist_opeth.xml">
+    <Content Include="Deserialization\SampleData\xml\artist_opeth.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\city_list.xml">
+    <Content Include="Deserialization\SampleData\xml\city_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\city_sanjose.xml">
+    <Content Include="Deserialization\SampleData\xml\city_sanjose.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\country_list.xml">
+    <Content Include="Deserialization\SampleData\xml\country_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\setlist_list.xml">
+    <Content Include="Deserialization\SampleData\xml\setlist_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\setlist_metallica.xml">
+    <Content Include="Deserialization\SampleData\xml\setlist_metallica.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\user_gshackles.xml">
+    <Content Include="Deserialization\SampleData\xml\user_gshackles.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\venue_list.xml">
+    <Content Include="Deserialization\SampleData\xml\venue_list.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Deserialization\SampleData\Xml\venue_royalalbert.xml">
+    <Content Include="Deserialization\SampleData\xml\venue_royalalbert.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="Deserialization\SampleData\Json\city_sanjose.json">
+    <None Include="Deserialization\SampleData\json\city_list.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\city_sanjose.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\country_list.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Deserialization\SampleData\json\venue_royalalbert.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

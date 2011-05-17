@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\References\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp, Version=101.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\References\RestSharp.dll</HintPath>
     </Reference>
@@ -42,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deserialization\Json\BadgerFisher.cs" />
+    <Compile Include="Deserialization\Json\SetlistFmJsonDeserializer.cs" />
     <Compile Include="Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs" />
     <Compile Include="Deserialization\ICustomXmlDeserializer.cs" />
     <Compile Include="Deserialization\Xml\SetlistFmXmlDeserializer.cs" />
@@ -120,9 +125,7 @@
     <Compile Include="Users.cs" />
     <Compile Include="UsersAsync.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deserialization\Json\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

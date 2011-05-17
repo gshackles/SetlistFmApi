@@ -1,0 +1,116 @@
+﻿{
+ "setlist":{
+  "@versionId":"73dc6219",
+  "@tour":"World Magnetic",
+  "@id":"3bd6440c",
+  "@eventDate":"25-07-2009",
+  "artist":{
+   "@sortName":"Metallica",
+   "@name":"Metallica",
+   "@mbid":"65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+   "url":"http:\/\/www.setlist.fm\/setlists\/metallica-3bd680c8.html"
+  },
+  "venue":{
+   "@name":"Sonisphere Festival",
+   "@id":"33d6d4ad",
+   "city":{
+    "@stateCode":"15",
+    "@state":"Western Finland",
+    "@name":"Pori",
+    "@id":"640999",
+    "coords":{
+     "@long":"21.7833333",
+     "@lat":"61.4833333"
+    },
+    "country":{
+     "@name":"Finland",
+     "@code":"FI"
+    }
+   },
+   "url":"http:\/\/www.setlist.fm\/venue\/sonisphere-festival-pori-finland-33d6d4ad.html"
+  },
+  "sets":{
+   "set":[
+    {
+     "song":[
+      {
+       "@name":"The Ecstasy of Gold",
+       "cover":{
+        "@sortName":"Morricone, Ennio",
+        "@name":"Ennio Morricone",
+        "@mbid":"a16e47f5-aa54-47fe-87e4-bb8af91a9fdd",
+        "url":"http:\/\/www.setlist.fm\/setlists\/ennio-morricone-23d6a833.html"
+       }
+      },
+      {
+       "@name":"Battery"
+      },
+      {
+       "@name":"Creeping Death"
+      },
+      {
+       "@name":"Fuel"
+      },
+      {
+       "@name":"Harvester of Sorrow"
+      },
+      {
+       "@name":"Fade to Black"
+      },
+      {
+       "@name":"Broken, Beat & Scarred"
+      },
+      {
+       "@name":"Cyanide"
+      },
+      {
+       "@name":"Sad But True"
+      },
+      {
+       "@name":"One"
+      },
+      {
+       "@name":"All Nightmare Long"
+      },
+      {
+       "@name":"The Day That Never Comes"
+      },
+      {
+       "@name":"Master of Puppets"
+      },
+      {
+       "@name":"Blackened"
+      },
+      {
+       "@name":"Nothing Else Matters"
+      },
+      {
+       "@name":"Enter Sandman"
+      }
+     ]
+    },
+    {
+     "@encore":"1",
+     "song":[
+      {
+       "@name":"Stone Cold Crazy",
+       "cover":{
+        "@sortName":"Queen",
+        "@name":"Queen",
+        "@mbid":"0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+        "url":"http:\/\/www.setlist.fm\/setlists\/queen-43d6e37f.html"
+       }
+      },
+      {
+       "@name":"Motorbreath"
+      },
+      {
+       "@name":"Seek & Destroy"
+      }
+     ]
+    }
+   ]
+  },
+  "url":"http:\/\/www.setlist.fm\/setlist\/metallica\/2009\/sonisphere-festival-pori-finland-3bd6440c.html"
+ }
+}

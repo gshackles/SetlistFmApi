@@ -1,0 +1,28 @@
+﻿{
+ "venues":{
+  "@total":"2",
+  "@page":"1",
+  "@itemsPerPage":"30",
+  "venue":[
+   {
+    "@name":"Terminal 5",
+    "@id":"6bd6227a",
+    "city":{
+     "@stateCode":"NY",
+     "@state":"New York",
+     "@name":"New York",
+     "@id":"5128581",
+     "coords":{
+      "@long":"-74.0059729",
+      "@lat":"40.7142691"
+     },
+     "country":{
+      "@name":"United States",
+      "@code":"US"
+     }
+    },
+    "url":"http:\/\/www.setlist.fm\/venue\/terminal-5-new-york-ny-usa-6bd6227a.html"
+   }
+  ]
+ }
+}

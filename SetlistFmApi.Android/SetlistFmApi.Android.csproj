@@ -33,6 +33,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Android">
+      <HintPath>..\References\Newtonsoft.Json.Android.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp.Android">
       <HintPath>..\References\RestSharp.Android.dll</HintPath>
     </Reference>
@@ -44,6 +47,12 @@
   <ItemGroup>
     <Compile Include="..\SetlistFmApi\Deserialization\ICustomXmlDeserializer.cs">
       <Link>Deserialization\ICustomXmlDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\Json\BadgerFisher.cs">
+      <Link>Deserialization\Json\BadgerFisher.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\Json\SetlistFmJsonDeserializer.cs">
+      <Link>Deserialization\Json\SetlistFmJsonDeserializer.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs">
       <Link>Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs</Link>
@@ -152,9 +161,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deserialization\Json\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>

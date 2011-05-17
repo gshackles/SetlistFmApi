@@ -41,6 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json.WindowsPhone">
+      <HintPath>..\References\Newtonsoft.Json.WindowsPhone.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp.WindowsPhone">
       <HintPath>..\References\RestSharp.WindowsPhone.dll</HintPath>
     </Reference>
@@ -54,6 +57,12 @@
   <ItemGroup>
     <Compile Include="..\SetlistFmApi\Deserialization\ICustomXmlDeserializer.cs">
       <Link>Deserialization\ICustomXmlDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\Json\BadgerFisher.cs">
+      <Link>Deserialization\Json\BadgerFisher.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\Json\SetlistFmJsonDeserializer.cs">
+      <Link>Deserialization\Json\SetlistFmJsonDeserializer.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs">
       <Link>Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs</Link>
@@ -162,14 +171,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deserialization\Json\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties ProjectLinkReference="943090bc-15ec-4b64-8042-f178328c40e1" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="943090bc-15ec-4b64-8042-f178328c40e1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

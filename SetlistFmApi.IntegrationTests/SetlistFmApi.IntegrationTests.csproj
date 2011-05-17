@@ -45,11 +45,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Xml\LocationTests.cs" />
-    <Compile Include="Xml\MusicTests.cs" />
+    <Compile Include="Json\LocationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Json\MusicTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Json\UserTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LocationTestsBase.cs" />
+    <Compile Include="MusicTestsBase.cs" />
+    <Compile Include="UserTestsBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="IntegrationTestBase.cs" />
-    <Compile Include="Xml\UserTests.cs" />
+    <Compile Include="Xml\LocationTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\MusicTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Xml\UserTests.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SetlistFmApi\SetlistFmApi.csproj">
@@ -57,9 +75,7 @@
       <Name>SetlistFmApi</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Json\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

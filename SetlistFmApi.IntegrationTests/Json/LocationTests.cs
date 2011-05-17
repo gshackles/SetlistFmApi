@@ -6,13 +6,13 @@ using SetlistFmApi.SearchOptions.Location;
 using Xunit;
 using RestSharp;
 
-namespace SetlistFmApi.IntegrationTests.Xml
+namespace SetlistFmApi.IntegrationTests.Json
 {
     public class LocationTests : LocationTestsBase
     {
         public override DataFormat Format
         {
-            get { return DataFormat.Xml; }
+            get { return DataFormat.Json; }
         }
     }
 }

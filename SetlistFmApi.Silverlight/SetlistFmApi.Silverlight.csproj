@@ -47,6 +47,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Silverlight">
+      <HintPath>..\References\Newtonsoft.Json.Silverlight.dll</HintPath>
+    </Reference>
     <Reference Include="RestSharp.Silverlight">
       <HintPath>..\References\RestSharp.Silverlight.dll</HintPath>
     </Reference>
@@ -61,6 +64,12 @@
   <ItemGroup>
     <Compile Include="..\SetlistFmApi\Deserialization\ICustomXmlDeserializer.cs">
       <Link>Deserialization\ICustomXmlDeserializer.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\Json\BadgerFisher.cs">
+      <Link>Deserialization\Json\BadgerFisher.cs</Link>
+    </Compile>
+    <Compile Include="..\SetlistFmApi\Deserialization\Json\SetlistFmJsonDeserializer.cs">
+      <Link>Deserialization\Json\SetlistFmJsonDeserializer.cs</Link>
     </Compile>
     <Compile Include="..\SetlistFmApi\Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs">
       <Link>Deserialization\Xml\CustomDeserializers\CitySearchResultXmlDeserializer.cs</Link>
@@ -169,16 +178,14 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Deserialization\Json\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
         <SilverlightProjectProperties />
       </FlavorProperties>
-      <UserProperties ProjectLinkReference="943090bc-15ec-4b64-8042-f178328c40e1" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" />
+      <UserProperties ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$" ProjectLinkReference="943090bc-15ec-4b64-8042-f178328c40e1" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

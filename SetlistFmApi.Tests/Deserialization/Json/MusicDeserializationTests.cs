@@ -7,10 +7,15 @@ using SetlistFmApi.Model;
 using SetlistFmApi.Model.Music;
 using SetlistFmApi.SearchResults.Music;
 using Xunit;
+using RestSharp;
 
 namespace SetlistFmApi.Tests.Deserialization.Json
 {
-    public class MusicDeserializationTests : DeserializationTestBase
+    public class MusicDeserializationTests : MusicDeserializationTestsBase
     {
+        public override DataFormat Format
+        {
+            get { return DataFormat.Json; }
+        }        
     }
 }
